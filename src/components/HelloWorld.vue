@@ -1,7 +1,7 @@
 <template>
   <div class="navbar" id="app">
     <ul v-for="app in values" :key="app.name">
-      <a :href="`#/${app.name}`">
+      <a :href="`/${app.name}`">
         <li>{{ app.name }}</li>
       </a>
     </ul>
