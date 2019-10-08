@@ -6,7 +6,6 @@ module.exports = {
   entry: ['@babel/polyfill', './src/main.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '',
     filename: 'build.js'
   },
   module: {
@@ -109,19 +108,6 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.LoaderOptionsPlugin({
       minimize: true
     }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-        // more options:
-        // https://github.com/kangax/html-minifier#options-quick-reference
-      },
-      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
-    })
+    new HtmlWebpackPlugin()
   ])
 }
