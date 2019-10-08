@@ -43,10 +43,14 @@ export default {
     async onSubmit() {
       event.preventDefault();
       try {
-        const response = await axios.get(
-          `http://localhost:3000/apps/${this.login.login}`
-        );
-        this.values = Object.values(response.data);
+        this.values = [
+          {
+            name: "app1",
+            url: "/app1/singleSpaEntry.js",
+            target: "https://app1-react-single-spa.netlify.com",
+            pathRewrite: { "^/app1": "" }
+          }
+        ];
         await registerApps(this.values);
         this.logged = true;
       } catch (error) {
