@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: ['@babel/polyfill', './src/main.js'],
@@ -121,6 +122,9 @@ if (process.env.NODE_ENV === 'production') {
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
-    })
+    }),
+    new CopyPlugin([
+      { from: '_redirects', to: 'static/' }
+    ]),
   ])
 }
