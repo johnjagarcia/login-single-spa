@@ -46,7 +46,7 @@ export default {
         this.values = [
           {
             name: "app1",
-            url: "/singleSpaEntry.js",
+            url: "app1/singleSpaEntry.js",
             target: "https://app1-react-single-spa.netlify.com",
             pathRewrite: { "^/app1": "" }
           }

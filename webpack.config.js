@@ -124,7 +124,8 @@ if (process.env.NODE_ENV === 'production') {
       chunksSortMode: 'dependency'
     }),
     new CopyPlugin([
-      { from: '_redirects', to: '' }
+      { from: '_redirects', to: '' },
+      { from: '_headers', to: '' }
     ]),
   ])
 }
