@@ -8,7 +8,7 @@ export async function registerApps(values) {
 
     values.forEach(app => {
         console.log('app :', app);
-        loadingPromises.push(loadApp(app.name, `/${app.name}`, `/${app.name}/singleSpaEntry.js`, `${app.name}/store.js`, globalEventDistributor));
+        loadingPromises.push(loadApp(app.name, `${app.name}`, `/${app.name}/singleSpaEntry.js`, `${app.name}/store.js`, globalEventDistributor));
     });
 
     // wait until all stores are loaded and all apps are registered with singleSpa
