@@ -3,8 +3,7 @@
     to = "https://app1-react-single-spa.netlify.com/singleSpaEntry.js"
     status = 200
     force = true
-    [redirects.headers]
-        Access-Control-Allow-Origin = "*" 
+    headers = {Access-Control-Allow-Origin = "*"}
 
 [[headers]]
     for = "/*"
