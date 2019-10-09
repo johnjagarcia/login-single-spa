@@ -1,11 +1,11 @@
 [[redirects]]
     from = "/app1"
-    to = ""
+    to = "https://app1-react-single-spa.netlify.com/singleSpaEntry.js"
     status = 200
     force = true
     headers = {Access-Control-Allow-Origin = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, PATCH, OPTIONS", "Access-Control-Allow-Headers" = "X-Requested-With, content-type, Authorization"}
 
 [[headers]]
-    for = "/app1/*"
+    for = "https://app1-react-single-spa.netlify.com/singleSpaEntry.js"
     [headers.values]
         Access-Control-Allow-Origin = "*"
