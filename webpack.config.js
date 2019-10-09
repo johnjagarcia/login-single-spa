@@ -123,9 +123,8 @@ if (process.env.NODE_ENV === 'production') {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
-    new CopyPlugin([
-      { from: '_redirects', to: '' },
-      { from: '_headers', to: '' }
+    new CopyPlugin([,
+      { from: 'netlify.toml', to: '' }
     ]),
   ])
 }
