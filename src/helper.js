@@ -2,7 +2,7 @@ import * as singleSpa from 'single-spa'; // waiting for this to be merged: https
 
 export function hashPrefix(prefix) {
     return function (location) {
-        return location.hash.startsWith(prefix);
+        return location.hash.startsWith(`#${prefix}`);
     }
 }
 
