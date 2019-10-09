@@ -1,0 +1,11 @@
+[[redirects]]
+from = “/app1/**”
+to = “https://app1-react-single-spa.netlify.com/singleSpaEntry.js”
+status = 200
+headers = { Access-Control-Allow-Origin = “*” }
+
+[[headers]]
+Define which paths this specific [[headers]] block will cover.
+for = “/*”
+[headers.values]
+Access-Control-Allow-Origin = “**”
